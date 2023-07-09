@@ -1,4 +1,5 @@
 // 満点解法 累積和 前計算O(N^2) クエリあたりO(N^4) → O(N^2+N^4・Q)
+// QCFiumのpragmaを使うと2971ms→1716ms 42%速くなる
 
 #include <bits/stdc++.h>
 using namespace std;
