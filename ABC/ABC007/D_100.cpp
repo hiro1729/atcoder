@@ -23,7 +23,7 @@ ll solve(ll x) {
 }
 
 int main() {
-  ll a, b;
-  cin >> a >> b;
-  cout << solve(b) - solve(a - 1) << '\n';
+    ll a, b;
+    cin >> a >> b;
+    cout << solve(b) - solve(a - 1) << '\n';
 }
