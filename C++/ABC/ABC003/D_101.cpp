@@ -3,8 +3,7 @@
 using namespace std;
 using ll = long long;
 const ll mod = 1000000007;
-ll h, w, x, y, d, l, ans;
-
+ll d, l;
 vector<vector<ll>> C;
  
 void pascal_init(int n) {
@@ -25,8 +24,9 @@ ll t(ll x, ll y) {
 }
 
 int main() {
+    ll r, c, x, y;
     pascal_init(900);
-    cin >> x >> y >> h >> w >> d >> l;
-    ans = (t(h, w) - t(h - 1, w) * 2 - t(h, w - 1) * 2 + t(h - 2, w) + t(h, w - 2) + t(h - 1, w - 1) * 4 - t(h - 2, w - 1) * 2 - t(h - 1, w - 2) * 2 + t(h - 2, w - 2)) % mod;
-    cout << (ans * (x - h + 1) * (y - w + 1) % mod + mod) % mod << '\n';
+    cin >> r >> c >> x >> y >> d >> l;
+    ll ans = (t(x, y) - t(x - 1, y) * 2 - t(x, y - 1) * 2 + t(x - 2, y) + t(x, y - 2) + t(x - 1, y - 1) * 4 - t(x - 2, y - 1) * 2 - t(x - 1, y - 2) * 2 + t(x - 2, y - 2)) % mod;
+    cout << (ans * (r - x + 1) * (c - y + 1) % mod + mod) % mod << '\n';
 }
