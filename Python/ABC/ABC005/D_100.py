@@ -1,3 +1,4 @@
+# TLEになるので今度直したい
 n = int(input())
 d = [list(map(int, input().split())) for _ in range(n)]
 dac = [[0] * (n + 1) for _ in range(n + 1)]
