@@ -20,7 +20,7 @@ int main() {
                 }
             }
             bool ok = true;
-            for (int i = 0; i < (int)b.size() - 1; i++) {
+            for (int i = 0; i < c - 1; i++) {
                 if (b[i] > b[i + 1]) ok = false;
             }
             if (ok) {
