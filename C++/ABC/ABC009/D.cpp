@@ -28,11 +28,7 @@ int main() {
                 }
            }
         }
-        for (int i = 0; i < k; i++) {
-            for (int j = 0; j < k; j++) {
-                a[i][j] = t[i][j];
-            }
-        }
+        a = t;
     };
     for (m--; m; m /= 2) {
         if (m % 2) mul(x, c);
