@@ -6,8 +6,8 @@ $N$人の国会議員と$M$個の人間関係$(x, y)$が与えられる。ここ
 
 ## 制約
 
-$$ 1 \leqq N \leqq 12 \
-0 \leqq M \leqq \frac{N(N-1)}{2} $$
+$ 1 \leqq N \leqq 12 $
+$ 0 \leqq M \leqq \frac{N(N-1)}{2} $
 
 ## 制約からの考察
 
