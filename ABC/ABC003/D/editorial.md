@@ -28,3 +28,7 @@ $X×YからD+L個を選ぶ方法$ について。実際は条件がもっと増�
 二つの集合 $A$ と $B$ があったとき、
 
 $$|A \cup B| = |A| + |B| - |A \cap B|$$
+
+* 3つのとき
+
+$$|A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |B \cap C| - |C \cap A| + |A \cap B \cap C|$$
