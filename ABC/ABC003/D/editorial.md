@@ -25,10 +25,32 @@ $X×YからD+L個を選ぶ方法$ について。実際は条件がもっと増�
 <details><summary>包除原理</summary>
 
 * 例: 2つのとき
-二つの集合 $A$ と $B$ があったとき、
+2つの集合 $A$ と $B$ があったとき、
 
 $$|A \cup B| = |A| + |B| - |A \cap B|$$
 
 * 3つのとき
 
 $$|A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |B \cap C| - |C \cap A| + |A \cap B \cap C|$$
+
+</details>
+
+4つの集合に対する包除原理を使う。上下左右とは、一番その方向にある行または列にデスクかサーバーラックがあるかどうかである。
+
+|上下左右|符号|式|
+|----|----|--|
+|oooo|+| ${}_{X \times Y}C_{D+L}$ |
+|ooox|-| ${}_{X \times (Y-1)}C_{D+L}$ |
+|ooxo|-| ${}_{X \times (Y-1)}C_{D+L}$ |
+|oxoo|-| ${}_{(X-1) \times Y}C_{D+L}$ |
+|xooo|-| ${}_{(X-1) \times Y}C_{D+L}$ |
+|ooxx|+| ${}_{X \times (Y-2)}C_{D+L}$ |
+|oxox|+| ${}_{(X-1) \times (Y-1)}C_{D+L}$ |
+|oxxo|+| ${}_{(X-1) \times (Y-1)}C_{D+L}$ |
+|xoox|+| ${}_{(X-1) \times (Y-1)}C_{D+L}$ |
+|xoxo|+| ${}_{(X-1) \times (Y-1)}C_{D+L}$ |
+|xxoo|+| ${}_{(X-2) \times Y}C_{D+L}$ |
+|oxxx|-| ${}_{(X-1) \times (Y-2)}C_{D+L}$ |
+|xoxx|-| ${}_{(X-1) \times (Y-2)}C_{D+L}$ |
+|xxox|-| ${}_{(X-2) \times (Y-1)}C_{D+L}$ |
+|xxxo|-| ${}_{(X-2) \times (Y-1)}C_{D+L}$ |
