@@ -7,7 +7,11 @@ $R×C$ の区画内に $D$ 個のデスクと、 $L$ 個のサーバーラック
 ## 制約
 
 $$ 1 \leqq R,C \leqq 30 $$
+
 $$ 1 \leqq X \leqq R $$
+
 $$ 1 \leqq Y \leqq C $$
+
 $$ 0 \leqq D,L $$
+
 $$ 1 \leqq D+L \leqq X×Y $$
