@@ -56,7 +56,7 @@ $$|A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |B \cap C| - |C \cap A| + |
 |xxxo|-| $`{}_{(X-2) \times (Y-1)}C_{D+L}`$ |
 |xxxx|+| $`{}_{(X-2) \times (Y-2)}C_{D+L}`$ |
 
-これらをまとめると答えは以下のようになる。
+これらをまとめると答えは以下のようになる。ただし、aやbが負のときは $`{}_a C_b`$ は0とする。
 
 $`({}_{X \times Y}C_{D+L} - {}_{X \times (Y-1)}C_{D+L} \times 2 - {}_{(X-1) \times Y}C_{D+L} \times 2 + {}_{X \times (Y-2)}C_{D+L} + {}_{(X-1) \times (Y-1)}C_{D+L} \times 4 + {}_{(X-2) \times Y}C_{D+L} - {}_{(X-1) \times (Y-2)}C_{D+L} \times 2 - {}_{(X-2) \times (Y-1)}C_{D+L} \times 2 + {}_{(X-2) \times (Y-2)}C_{D+L}) \times (R-X+1) \times (C-Y+1) \times {}_{D+L}C_D`$
 
