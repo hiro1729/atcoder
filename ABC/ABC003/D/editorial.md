@@ -54,3 +54,34 @@ $$|A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |B \cap C| - |C \cap A| + |
 |xoxx|-| $`{}_{(X-1) \times (Y-2)}C_{D+L}`$ |
 |xxox|-| $`{}_{(X-2) \times (Y-1)}C_{D+L}`$ |
 |xxxo|-| $`{}_{(X-2) \times (Y-1)}C_{D+L}`$ |
+|xxxx|+| $`{}_{(X-2) \times (Y-2)}C_{D+L}`$ |
+
+これらをまとめると答えは以下のようになる。
+
+$$ ({}_{X \times Y}C_{D+L} - {}_{X \times (Y-1)}C_{D+L} \times 2 - {}_{(X-1) \times Y}C_{D+L} \times 2 + {}_{X \times (Y-2)}C_{D+L} + {}_{(X-1) \times (Y-1)}C_{D+L} \times 4 + {}_{(X-2) \times Y}C_{D+L} - {}_{(X-1) \times (Y-2)}C_{D+L} \times 2 - {}_{(X-2) \times (Y-1)}C_{D+L} \times 2 + {}_{(X-2) \times (Y-2)}C_{D+L}) $$
+
+## コード
+
+``` cpp
+// ライブラリ省略
+const int mod=1000000007;
+int main() {
+  ll r, c, x, y, d, l;
+  cin >> r >> c >> x >> y >> d >> l;
+  mComb mc; mc.init(2000);
+  auto c2 = [&](int a, int b) -> ll {
+    if (a <= 0 || b <= 0 || a * b < l + d)
+      return 0;
+    return mc.C(a * b, d + l);
+  };
+  ll ans = 0;
+  ans += c2(x, y);
+  ans -= c2(x, y - 1) * 2 + c2(x - 1, y) * 2;
+  ans += c2(x, y - 2) + c2(x - 1, y - 1) * 4 + c2(x - 2, y);
+  ans -= c2(x - 1, y - 2) * 2 + c2(x - 2, y - 1) * 2;
+  ans += c2(x - 2, y - 2);
+  ans %= mod;
+  ans *= (r - x + 1) * (c - y + 1) * mc.C(d + l, d) % mod;
+  cout << (ans % mod + mod) % mod << '\n';
+}
+```
