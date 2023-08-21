@@ -40,17 +40,17 @@ $$|A \cup B \cup C| = |A| + |B| + |C| - |A \cap B| - |B \cap C| - |C \cap A| + |
 |上下左右|符号|式|
 |----|----|--|
 |oooo|+| $`{}_{X \times Y}C_{D+L}`$ |
-|ooox|-| ${}_{X \times (Y-1)}C_{D+L}$ |
-|ooxo|-| ${}_{X \times (Y-1)}C_{D+L}$ |
-|oxoo|-| ${}_{(X-1) \times Y}C_{D+L}$ |
-|xooo|-| ${}_{(X-1) \times Y}C_{D+L}$ |
-|ooxx|+| ${}_{X \times (Y-2)}C_{D+L}$ |
-|oxox|+| ${}_{(X-1) \times (Y-1)}C_{D+L}$ |
-|oxxo|+| ${}_{(X-1) \times (Y-1)}C_{D+L}$ |
-|xoox|+| ${}_{(X-1) \times (Y-1)}C_{D+L}$ |
-|xoxo|+| ${}_{(X-1) \times (Y-1)}C_{D+L}$ |
-|xxoo|+| ${}_{(X-2) \times Y}C_{D+L}$ |
-|oxxx|-| ${}_{(X-1) \times (Y-2)}C_{D+L}$ |
-|xoxx|-| ${}_{(X-1) \times (Y-2)}C_{D+L}$ |
-|xxox|-| ${}_{(X-2) \times (Y-1)}C_{D+L}$ |
-|xxxo|-| ${}_{(X-2) \times (Y-1)}C_{D+L}$ |
+|ooox|-| $`{}_{X \times (Y-1)}C_{D+L}`$ |
+|ooxo|-| $`{}_{X \times (Y-1)}C_{D+L}`$ |
+|oxoo|-| $`{}_{(X-1) \times Y}C_{D+L}`$ |
+|xooo|-| $`{}_{(X-1) \times Y}C_{D+L}`$ |
+|ooxx|+| $`{}_{X \times (Y-2)}C_{D+L}`$ |
+|oxox|+| $`{}_{(X-1) \times (Y-1)}C_{D+L}`$ |
+|oxxo|+| $`{}_{(X-1) \times (Y-1)}C_{D+L}`$ |
+|xoox|+| $`{}_{(X-1) \times (Y-1)}C_{D+L}`$ |
+|xoxo|+| $`{}_{(X-1) \times (Y-1)}C_{D+L}`$ |
+|xxoo|+| $`{}_{(X-2) \times Y}C_{D+L}`$ |
+|oxxx|-| $`{}_{(X-1) \times (Y-2)}C_{D+L}`$ |
+|xoxx|-| $`{}_{(X-1) \times (Y-2)}C_{D+L}`$ |
+|xxox|-| $`{}_{(X-2) \times (Y-1)}C_{D+L}`$ |
+|xxxo|-| $`{}_{(X-2) \times (Y-1)}C_{D+L}`$ |
