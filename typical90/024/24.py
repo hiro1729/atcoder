@@ -1,0 +1,5 @@
+n, k = map(int, input().split())
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
+c = sum(abs(a[i] - b[i]) for i in range(n))
+print("Yes" if k >= c and k % 2 == c % 2 else "No")
