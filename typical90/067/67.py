@@ -9,4 +9,4 @@ for _ in range(k):
         n += str(n10 % 9)
         n10 //= 9
     n = n[::-1].replace('8', '5')
-print(n)
+print(0 if n == '' else n)
