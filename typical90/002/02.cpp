@@ -21,7 +21,7 @@ int main() {
 	vector<string> ans;
 	for (int i = 0; i < (1 << N); i++) {
 		string par;
-		for (int j = 0; j < N; j++) {
+		for (int j = N - 1; j >= 0; j--) {
 			par += "()"[(i >> j) & 1];
 		}
 		if (is_ok(par)) {
