@@ -1,5 +1,0 @@
-N = int(input())
-K = int(input())
-X = int(input())
-Y = int(input())
-print(N * X if N <= K else K * X + (N - K) * Y)
