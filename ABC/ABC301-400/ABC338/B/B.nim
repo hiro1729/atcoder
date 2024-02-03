@@ -1,4 +1,3 @@
-import strutils, sequtils
 let S = stdin.readLine
 var cnt = newSeq[int](26)
 for c in S:
