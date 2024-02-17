@@ -1,4 +1,4 @@
-import strutils, sequtils
+import strutils, sequtils, algorithm
 
 type BIT = object
   n: int
@@ -27,20 +27,22 @@ proc sum(bit: var BIT, l, r: int): int =
 
 let N = stdin.readLine.parseInt
 var
-  A = newSeq[int](N)
-  B = newSeq[int](N)
+  P = newSeq[tuple[f: int, s: int]](N)
   fwA = initBIT(2 * N)
   fwB = initBIT(2 * N)
 for i in 0..<N:
   let a_b = stdin.readLine.split().map(parseInt)
-  A[i] = a_b[0] - 1
-  B[i] = a_b[1] - 1
-  if A[i] > B[i]:
-    swap(A[i], B[i])
-  fwA.add(A[i], 1)
-  fwB.add(B[i], 1)
-for i in 0..<N:
-  if fwB.sum(A[i] + 1, B[i]) < fwA.sum(A[i] + 1, B[i]):
+  P[i].f = a_b[0] - 1
+  P[i].s = a_b[1] - 1
+  if P[i].f > P[i].s:
+    swap(P[i].f, P[i].s)
+  fwA.add(P[i].f, 1)
+  fwB.add(P[i].s, 1)
+sort(P)
+for (A, B) in P:
+  if fwB.sum(A + 1, B) < fwA.sum(A + 1, B):
     echo "Yes"
     quit()
+  fwA.add(A, -1)
+  fwB.add(B, -1)
 echo "No"

@@ -6,22 +6,25 @@ using namespace atcoder;
 int main() {
 	int N;
 	cin >> N;
-	vector<int> A(N), B(N);
+	vector<pair<int, int>> P(N);
 	fenwick_tree<int> fwA(2 * N), fwB(2 * N);
 	for (int i = 0; i < N; i++) {
-		cin >> A[i] >> B[i];
-		A[i]--; B[i]--;
-		if (A[i] > B[i]) {
-			swap(A[i], B[i]);
+		cin >> P[i].first >> P[i].second;
+		P[i].first--;
+		P[i].second--;
+		if (P[i].first > P[i].second) {
+			swap(P[i].first, P[i].second);
 		}
-		fwA.add(A[i], 1);
-		fwB.add(B[i], 1);
+		fwA.add(P[i].first, 1);
+		fwB.add(P[i].second, 1);
 	}
-	for (int i = 0; i < N; i++) {
-		if (fwB.sum(A[i] + 1, B[i]) < fwA.sum(A[i] + 1, B[i])) {
+	for (auto [A, B]: P) {
+		if (fwB.sum(A + 1, B) < fwA.sum(A + 1, B)) {
 			cout << "Yes\n";
 			return 0;
 		}
+		fwA.add(A, -1);
+		fwB.add(B, -1);
 	}
 	cout << "No\n";
 }
