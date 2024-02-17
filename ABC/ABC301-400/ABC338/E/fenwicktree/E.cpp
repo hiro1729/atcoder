@@ -6,7 +6,7 @@ using namespace atcoder;
 int main() {
 	int N;
 	cin >> N;
-	vector<int> A(N), B(N), cntA(2 * N), cntB(2 * N);
+	vector<int> A(N), B(N);
 	fenwick_tree<int> fwA(2 * N), fwB(2 * N);
 	for (int i = 0; i < N; i++) {
 		cin >> A[i] >> B[i];
