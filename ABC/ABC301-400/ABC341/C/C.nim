@@ -3,7 +3,6 @@ let h_w_n = stdin.readLine.split().map(parseInt)
 let
   H = h_w_n[0]
   W = h_w_n[1]
-  N = h_w_n[2]
   T = stdin.readLine
 var S = newSeq[string](H)
 for i in 0..<H:
