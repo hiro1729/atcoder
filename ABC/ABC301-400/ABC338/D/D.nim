@@ -1,8 +1,6 @@
 import strutils, sequtils
-let n_m = stdin.readLine.split().map(parseInt)
-let
-  N = n_m[0]
-  M = n_m[1]
+var N, M: int
+(N, M) = stdin.readLine.split().map(parseInt)
 var X = stdin.readLine.split().map(parseInt)
 for i in 0..<M:
   X[i] -= 1
