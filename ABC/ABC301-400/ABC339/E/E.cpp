@@ -14,7 +14,7 @@ int e() {
 int main() {
 	int N, D, A, d = 500000;
 	cin >> N >> D;
-	segtree<int, op, e> seg(d * 3);
+	segtree<int, op, e> seg(d * 3 + 1);
 	for (int i = 0; i < N; i++) {
 		cin >> A;
 		seg.set(A + d, seg.prod(A - D + d, A + D + 1 + d) + 1);
