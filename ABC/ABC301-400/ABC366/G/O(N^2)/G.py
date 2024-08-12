@@ -16,7 +16,7 @@ for i in range(N):
 			break
 	if k == -1:
 		c[i] = 1 << i
-		C |= 1 << i
+		C |= c[i]
 		continue
 	g[i], g[k] = g[k], g[i]
 	for j in range(N):
