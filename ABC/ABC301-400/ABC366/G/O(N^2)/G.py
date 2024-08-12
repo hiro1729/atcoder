@@ -6,8 +6,8 @@ for _ in range(M):
 	v -= 1
 	g[u] |= 1 << v
 	g[v] |= 1 << u
-d_1 = [0] * N
 c = [0] * N
+C = 0
 for i in range(N):
 	k = -1
 	for j in range(N):
@@ -15,8 +15,9 @@ for i in range(N):
 			k = j
 			break
 	if k == -1:
+		c[i] = 1 << i
+		C |= 1 << i
 		continue
-	d_1[i] = 1
 	g[i], g[k] = g[k], g[i]
 	for j in range(N):
 		if i != j and (g[j] >> i) & 1 == 1:
@@ -25,14 +26,9 @@ for i in range(N):
 	if g[i].bit_count() == 1:
 		print("No")
 		exit()
-C = 0
-for i in range(N):
-	if d_1[i] == 0:
-		c[i] = 1 << i
-		C |= 1 << i
 for i in range(N):
 	for j in range(N):
-		if d_1[j] == 1 and (g[i] >> j) & 1 == 1:
+		if c[j] == 0 and (g[i] >> j) & 1 == 1:
 			c[j] ^= g[i] & C
 print("Yes")
 print(*c)
